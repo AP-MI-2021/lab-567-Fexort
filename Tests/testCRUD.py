@@ -12,7 +12,7 @@ def testAdaugaAvion():
     assert getPret(getById("1", lista)) == 3000
     assert getCheckin(getById("1", lista)) == True
 
-def testStergePrajitura():
+def testStergeAvion():
     lista = []
     lista = adaugaAvion("1", "pandora", "national", 3000, True, lista)
     lista = adaugaAvion("2", "terminator", "national", 3000, True, lista)

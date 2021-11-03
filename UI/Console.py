@@ -1,12 +1,15 @@
 from Domain.aeriene import toString
 from Logic.CRUD import adaugaAvion, stergeavion, ModificaAvion
-
+from Logic.AfisareSumaPretDupaNume import afisaresumapretnume
+from Logic.determinarepretmaxim import determinarepretmaxim
 
 def printMenu():
     print("1. adauga avion")
     print("2. sterge avion")
     print("3. modifica avion")
-    print("4. afiseaza avion")
+    print("4. afisarea sumelor preturilor dupa nume")
+    print("5. afisarea pretului maxim pentru clasa")
+    print("a. afiseaza avion")
     print("x. iesire")
 
 
@@ -36,7 +39,14 @@ def showAll(lista):
     for avion in lista:
         print(toString(avion))
 
-
+def UIafisareSumaPretNume(lista):
+    suma = afisaresumapretnume(lista)
+    for nume in suma:
+        print("{} are suma de {}".format(nume, suma[nume]))
+def UIdeterminarePretMax(lista):
+    max_cls = determinarepretmaxim(lista)
+    for clasa in max_cls:
+        print("clasa {} are pretul cel mai mare de: {}".format(clasa,max_cls[clasa]))
 
 def runMenu(lista):
     while True:
@@ -49,6 +59,10 @@ def runMenu(lista):
         elif optiune == "3":
             lista = UImodificaAvion(lista)
         elif optiune == "4":
+            lista = UIafisareSumaPretNume(lista)
+        elif optiune == "5":
+            lista = UIdeterminarePretMax(lista)
+        elif optiune == "a":
             showAll(lista)
         elif optiune == "x":
             break
