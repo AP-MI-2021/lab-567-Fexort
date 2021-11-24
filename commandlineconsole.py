@@ -40,7 +40,7 @@ def commandlineconsole(lista):
                         print("Au fost sterse date ")
                     elif comandadiferita[0] == "update":
                         if len(comandadiferita) != 6:
-                            raise ValueError("Trebuie sa introduceti exact 5 date! ")
+                            raise ValueError("Trebuie sa introduceti exact 5 date!")
                         id = comandadiferita[1]
                         nume = comandadiferita[2]
                         clasa = comandadiferita[3]
