@@ -26,6 +26,9 @@ def getPret(avion):
     return avion["pret"]
 def getCheckin(avion):
     return avion["checkin"]
+def getAll(avion):
+    return getId(avion), getNume(avion), getClasa(avion), getPret(avion), getCheckin(avion)
+
 def toString(avion):
     return "Id: {}, Nume: {}, Clasa: {}, Pret: {}, Checkin: {}".format(
         getId(avion),
