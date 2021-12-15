@@ -32,8 +32,8 @@ def getAll(avion):
 def toString(avion):
     return "Id: {}, Nume: {}, Clasa: {}, Pret: {}, Checkin: {}".format(
         getId(avion),
-        getPret(avion),
         getNume(avion),
-        getCheckin(avion),
-        getClasa(avion)
+        getClasa(avion),
+        getPret(avion),
+        getCheckin(avion)
     )

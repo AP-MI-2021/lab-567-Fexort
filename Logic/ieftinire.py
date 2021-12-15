@@ -8,7 +8,7 @@ def ieftiniri(procentaj, lista):
         raise ValueError("Procentajul nu trebuie sa fie mai mic decat 0 ")
     lista_noua = []
     for avion in lista:
-        if getCheckin(avion) == "Da":
+        if getCheckin(avion) == True:
             noulPret = getPret(avion) - (procentaj / 100 * getPret(avion))
             id, nume, clasa, pret, checkin = getAll(avion)
             avionNou = creeazaRezervare(id, nume, clasa, noulPret, checkin)
